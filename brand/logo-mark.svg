@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect x="15" y="15" width="90" height="90" rx="22" fill="url(#fg)" transform="rotate(4, 60, 60)"/>
+  <text x="60" y="76" font-family="Inter, sans-serif" font-weight="900" font-size="52"
+        fill="#0a1c30" text-anchor="middle" letter-spacing="-3">FS</text>
+</svg>

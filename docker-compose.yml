@@ -1,0 +1,26 @@
+services:
+  front-seat-holdings:
+    build: .
+    image: front-seat-holdings:latest
+    container_name: front-seat-holdings
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8090}:80"
+    networks:
+      - coolify
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:80/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    labels:
+      # Coolify / Traefik auto-routing
+      - "traefik.enable=true"
+      - "traefik.http.routers.front-seat.rule=Host(`${FQDN:-frontseatview.com}`)"
+      - "traefik.http.routers.front-seat.entrypoints=websecure"
+      - "traefik.http.routers.front-seat.tls.certresolver=letsencrypt"
+      - "traefik.http.services.front-seat.loadbalancer.server.port=80"
+
+networks:
+  coolify:
+    external: true
