@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holdings Siège Avant Inc. — Mener depuis l'Avant</title>
+  <meta name="description" content="Holdings Siège Avant Inc. est une société de portefeuille canadienne avec des divisions en internet par fibre, logiciels, production alimentaire, consultation, location de véhicules et recrutement.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            front: {
+              50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d',
+              400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309',
+              800: '#92400e', 900: '#78350f', 950: '#451a03',
+            },
+            navy: {
+              50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8',
+              400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68',
+              800: '#1e3a5f', 900: '#102a43', 950: '#0a1c30',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-gradient {
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245, 158, 11, 0.15) 0%, transparent 70%),
+                  linear-gradient(180deg, #0a1c30 0%, #102a43 50%, #1e3a5f 100%);
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(245, 158, 11, 0.25);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-white text-navy-900 font-sans antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 w-full z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/fr" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-front-500 rounded-lg flex items-center justify-center font-black text-navy-950 text-lg group-hover:bg-front-400 transition-colors">
+          SA
+        </div>
+        <span class="text-white font-semibold text-lg tracking-tight">
+          Siège <span class="text-front-400 font-bold">Avant</span>
+        </span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#a-propos" class="text-navy-200 hover:text-front-400 transition-colors">À propos</a>
+        <a href="#divisions" class="text-navy-200 hover:text-front-400 transition-colors">Divisions</a>
+        <a href="#histoire" class="text-navy-200 hover:text-front-400 transition-colors">Notre histoire</a>
+        <a href="/carrieres" class="text-navy-200 hover:text-front-400 transition-colors">Carrières</a>
+        <a href="#contact" class="px-4 py-2 border border-front-500 text-front-400 rounded-lg hover:bg-front-500 hover:text-navy-950 font-medium transition-all">
+          Contact
+        </a>
+        <span class="text-navy-500 text-xs"><a href="/" class="hover:text-front-400 transition-colors">EN</a> / FR</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-gradient min-h-screen flex items-center justify-center pt-20 px-6">
+    <div class="text-center max-w-4xl mx-auto">
+      <div class="mb-10 animate-float">
+        <div class="mx-auto w-28 h-28 bg-gradient-to-br from-front-400 to-front-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-front-500/30 rotate-3 hover:rotate-0 transition-transform duration-500">
+          <span class="text-navy-950 font-black text-5xl tracking-tighter">SA</span>
+        </div>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black text-white tracking-tight leading-tight mb-6">
+        Mener depuis
+        <span class="gradient-text">l'Avant</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-navy-200 font-light max-w-2xl mx-auto mb-4 leading-relaxed">
+        Une société de portefeuille canadienne qui bâtit des entreprises pour faire avancer les industries — de la fibre à l'alimentation, du code aux voitures.
+      </p>
+      <p class="text-navy-400 text-sm mb-10">
+        Front Seat Holdings Inc. • Holdings Siège Avant Inc.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#divisions" class="px-8 py-4 bg-front-500 text-navy-950 font-bold rounded-xl hover:bg-front-400 transition-all text-lg shadow-lg shadow-front-500/25">
+          Nos entreprises
+        </a>
+        <a href="#a-propos" class="px-8 py-4 border border-navy-600 text-white font-medium rounded-xl hover:border-front-500 hover:text-front-400 transition-all text-lg">
+          En savoir plus
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="a-propos" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-front-600 font-semibold text-sm tracking-widest uppercase">À propos</span>
+          <h2 class="text-4xl md:text-5xl font-black text-navy-900 mt-3 mb-6 leading-tight">
+            Une structure.<br>
+            <span class="text-front-500">Des possibilités infinies.</span>
+          </h2>
+          <p class="text-navy-600 text-lg leading-relaxed mb-6">
+            Holdings Siège Avant fournit l'épine dorsale juridique et opérationnelle d'un portefeuille d'entreprises distinctes. Chaque division opère sous son propre nom commercial, la société de portefeuille gérant les ressources partagées, les risques et la stratégie.
+          </p>
+          <div class="flex flex-wrap gap-8 mt-8">
+            <div>
+              <div class="text-3xl font-black text-navy-900">6+</div>
+              <div class="text-navy-500 text-sm">Divisions</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-navy-900">Fédérale</div>
+              <div class="text-navy-500 text-sm">Constitution</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-navy-900">ON+AB</div>
+              <div class="text-navy-500 text-sm">Provinces</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-navy-900 rounded-3xl p-10 text-white shadow-2xl">
+          <div class="w-16 h-16 bg-front-500 rounded-xl flex items-center justify-center font-black text-navy-950 text-2xl mb-6">SA</div>
+          <h3 class="text-2xl font-bold mb-2">Holdings Siège Avant Inc.</h3>
+          <p class="text-navy-300 text-sm mb-6">Front Seat Holdings Inc.</p>
+          <div class="space-y-4 text-sm">
+            <div class="flex justify-between border-b border-navy-700 pb-3">
+              <span class="text-navy-400">Structure</span>
+              <span class="text-white font-medium">Société fédérale canadienne</span>
+            </div>
+            <div class="flex justify-between border-b border-navy-700 pb-3">
+              <span class="text-navy-400">Type</span>
+              <span class="text-white font-medium">Société de portefeuille</span>
+            </div>
+            <div class="flex justify-between border-b border-navy-700 pb-3">
+              <span class="text-navy-400">Fondée</span>
+              <span class="text-white font-medium">2026</span>
+            </div>
+            <div class="flex justify-between border-b border-navy-700 pb-3">
+              <span class="text-navy-400">Langue</span>
+              <span class="text-white font-medium">Français / English</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-navy-400">Statut</span>
+              <span class="text-emerald-400 font-medium">Actif</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVISIONS -->
+  <section id="divisions" class="py-24 px-6 bg-navy-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-front-500 font-semibold text-sm tracking-widest uppercase">Notre portefeuille</span>
+        <h2 class="text-4xl md:text-5xl font-black text-white mt-3 mb-4">
+          Six routes. <span class="text-front-400">Un seul pilote.</span>
+        </h2>
+        <p class="text-navy-300 text-lg max-w-2xl mx-auto">
+          Chaque division opère indépendamment sous un nom commercial dédié, soutenue par l'infrastructure partagée de la société de portefeuille.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-default group">
+          <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 mb-5 text-2xl group-hover:scale-110 transition-transform">⚡</div>
+          <h3 class="text-xl font-bold text-white mb-2">Front Seat Fiber</h3>
+          <p class="text-navy-400 text-sm mb-4">Fournisseur d'accès Internet</p>
+          <p class="text-navy-300 text-sm leading-relaxed">Internet par fibre haute vitesse connectant les communautés en Ontario et en Alberta. Infrastructure fiable, soutien local.</p>
+          <div class="mt-5 pt-4 border-t border-navy-700"><span class="text-xs text-front-500 font-semibold tracking-wide">TÉLÉCOM</span></div>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-default group">
+          <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mb-5 text-2xl group-hover:scale-110 transition-transform">⌨️</div>
+          <h3 class="text-xl font-bold text-white mb-2">Front Seat Software</h3>
+          <p class="text-navy-400 text-sm mb-4">Développement sur mesure & SaaS</p>
+          <p class="text-navy-300 text-sm leading-relaxed">Création d'outils, de plateformes et de systèmes d'automatisation qui donnent un avantage aux entreprises. Du MVP à l'entreprise.</p>
+          <div class="mt-5 pt-4 border-t border-navy-700"><span class="text-xs text-front-500 font-semibold tracking-wide">TECHNOLOGIE</span></div>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-default group">
+          <div class="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 mb-5 text-2xl group-hover:scale-110 transition-transform">🥬</div>
+          <h3 class="text-xl font-bold text-white mb-2">Front Seat Foods</h3>
+          <p class="text-navy-400 text-sm mb-4">Production et transformation alimentaire</p>
+          <p class="text-navy-300 text-sm leading-relaxed">De la cuisine au rayon — production de produits alimentaires de qualité avec un approvisionnement transparent et des ingrédients propres.</p>
+          <div class="mt-5 pt-4 border-t border-navy-700"><span class="text-xs text-front-500 font-semibold tracking-wide">ALIMENTATION</span></div>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-default group">
+          <div class="w-14 h-14 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 mb-5 text-2xl group-hover:scale-110 transition-transform">📊</div>
+          <h3 class="text-xl font-bold text-white mb-2">Front Seat Consulting</h3>
+          <p class="text-navy-400 text-sm mb-4">Stratégie d'entreprise & Opérations</p>
+          <p class="text-navy-300 text-sm leading-relaxed">Conseil en stratégie, optimisation des processus et croissance pour les startups et les entreprises établies dans tous les secteurs.</p>
+          <div class="mt-5 pt-4 border-t border-navy-700"><span class="text-xs text-front-500 font-semibold tracking-wide">SERVICES PROFESSIONNELS</span></div>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-default group">
+          <div class="w-14 h-14 bg-rose-500/20 rounded-xl flex items-center justify-center text-rose-400 mb-5 text-2xl group-hover:scale-110 transition-transform">🚗</div>
+          <h3 class="text-xl font-bold text-white mb-2">Front Seat Rentals</h3>
+          <p class="text-navy-400 text-sm mb-4">Location de véhicules & Gestion de flotte</p>
+          <p class="text-navy-300 text-sm leading-relaxed">Location de véhicules pour entreprises et particuliers avec des conditions flexibles, une flotte bien entretenue et des prix transparents.</p>
+          <div class="mt-5 pt-4 border-t border-navy-700"><span class="text-xs text-front-500 font-semibold tracking-wide">AUTOMOBILE</span></div>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-default group">
+          <div class="w-14 h-14 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 mb-5 text-2xl group-hover:scale-110 transition-transform">👥</div>
+          <h3 class="text-xl font-bold text-white mb-2">Front Seat Recruitment</h3>
+          <p class="text-navy-400 text-sm mb-4">Acquisition de talents & Recrutement</p>
+          <p class="text-navy-300 text-sm leading-relaxed">Mise en relation des meilleurs talents avec les bonnes opportunités. Recrutement technique et de direction à travers le Canada.</p>
+          <div class="mt-5 pt-4 border-t border-navy-700"><span class="text-xs text-front-500 font-semibold tracking-wide">RESSOURCES HUMAINES</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTOIRE -->
+  <section id="histoire" class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-front-600 font-semibold text-sm tracking-widest uppercase">Pourquoi ce nom</span>
+      <h2 class="text-4xl md:text-5xl font-black text-navy-900 mt-3 mb-8 leading-tight">
+        La vue depuis le <span class="text-front-500">siège avant.</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left mt-12">
+        <div class="p-8 bg-stone-50 rounded-2xl">
+          <div class="text-3xl mb-4">🎯</div>
+          <h3 class="font-bold text-navy-900 text-lg mb-3">Clarté de vision</h3>
+          <p class="text-navy-600 text-sm leading-relaxed">Le siège avant offre la vue la plus claire sur la route. Nous bâtissons des entreprises avec une perspective à long terme.</p>
+        </div>
+        <div class="p-8 bg-stone-50 rounded-2xl">
+          <div class="text-3xl mb-4">⚙️</div>
+          <h3 class="font-bold text-navy-900 text-lg mb-3">Les mains sur le volant</h3>
+          <p class="text-navy-600 text-sm leading-relaxed">La propriété passive n'est pas notre modèle. Chaque division reçoit une direction stratégique active de la société de portefeuille.</p>
+        </div>
+        <div class="p-8 bg-stone-50 rounded-2xl">
+          <div class="text-3xl mb-4">🛡️</div>
+          <h3 class="font-bold text-navy-900 text-lg mb-3">Construit pour le parcours</h3>
+          <p class="text-navy-600 text-sm leading-relaxed">Une structure de portefeuille qui protège chaque entreprise — isolation des responsabilités, comptabilité rigoureuse, gouvernance professionnelle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 px-6 bg-navy-950">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-front-500 font-semibold text-sm tracking-widest uppercase">Contactez-nous</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+        Parlons de <span class="text-front-400">la suite.</span>
+      </h2>
+      <p class="text-navy-300 text-lg mb-12 max-w-xl mx-auto">
+        Que vous soyez un partenaire potentiel, un client ou simplement curieux — nous aimerions vous entendre.
+      </p>
+      <div class="bg-navy-900 rounded-3xl p-10 max-w-lg mx-auto border border-navy-800">
+        <div class="space-y-6 text-left">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-front-500/20 rounded-lg flex items-center justify-center text-front-400 shrink-0">🏢</div>
+            <div>
+              <div class="text-white font-medium">Holdings Siège Avant Inc.</div>
+              <div class="text-navy-400 text-sm">Front Seat Holdings Inc.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-front-500/20 rounded-lg flex items-center justify-center text-front-400 shrink-0">📍</div>
+            <div>
+              <div class="text-white font-medium">Ontario & Alberta, Canada</div>
+              <div class="text-navy-400 text-sm">Société fédérale</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-front-500/20 rounded-lg flex items-center justify-center text-front-400 shrink-0">✉️</div>
+            <div>
+              <div class="text-white font-medium">contact@frontseatview.com</div>
+              <div class="text-navy-400 text-sm">Demandes générales</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-navy-800 bg-navy-950 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-navy-500">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 bg-front-500 rounded flex items-center justify-center font-black text-navy-950 text-xs">SA</div>
+        <span>© 2026 Holdings Siège Avant Inc. Tous droits réservés.</span>
+      </div>
+      <div class="flex gap-6">
+        <span>Front Seat Fiber</span>
+        <span>Front Seat Software</span>
+        <span>Front Seat Foods</span>
+        <span>Front Seat Consulting</span>
+        <span>Front Seat Rentals</span>
+        <span>Front Seat Recruitment</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
