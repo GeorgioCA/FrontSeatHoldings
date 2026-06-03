@@ -7,6 +7,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Site files
 COPY index.html /usr/share/nginx/html/
 COPY fr.html /usr/share/nginx/html/
+COPY carrieres.html /usr/share/nginx/html/
 COPY careers.html /usr/share/nginx/html/
 COPY brand/ /usr/share/nginx/html/brand/
 
