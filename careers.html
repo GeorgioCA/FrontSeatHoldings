@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Front Seat Holdings Inc.</title>
+  <meta name="description" content="Join Front Seat Holdings and build your career in the front seat. Explore open positions in QA, cybersecurity, and software development.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            front: {
+              50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d',
+              400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309',
+              800: '#92400e', 900: '#78350f', 950: '#451a03',
+            },
+            navy: {
+              50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8',
+              400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68',
+              800: '#1e3a5f', 900: '#102a43', 950: '#0a1c30',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(245, 158, 11, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-navy-950 text-navy-200 font-sans antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 w-full z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-front-500 rounded-lg flex items-center justify-center font-black text-navy-950 text-lg group-hover:bg-front-400 transition-colors">
+          FS
+        </div>
+        <span class="text-white font-semibold text-lg tracking-tight">
+          Front Seat <span class="text-front-400 font-bold">Holdings</span>
+        </span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="/#about" class="text-navy-200 hover:text-front-400 transition-colors">About</a>
+        <a href="/#divisions" class="text-navy-200 hover:text-front-400 transition-colors">Divisions</a>
+        <a href="/#story" class="text-navy-200 hover:text-front-400 transition-colors">Our Story</a>
+        <a href="/careers" class="text-front-400 font-medium">Careers</a>
+        <a href="/#contact" class="px-4 py-2 border border-front-500 text-front-400 rounded-lg hover:bg-front-500 hover:text-navy-950 font-medium transition-all">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-[50vh] flex items-center justify-center pt-24 pb-16 px-6" style="background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.12) 0%, transparent 60%), linear-gradient(180deg, #0a1c30 0%, #102a43 100%);">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="text-front-500 font-semibold text-sm tracking-widest uppercase">Careers</span>
+      <h1 class="text-5xl md:text-6xl font-black text-white mt-4 mb-6 leading-tight tracking-tight">
+        Build your career<br><span class="gradient-text">in the front seat.</span>
+      </h1>
+      <p class="text-lg text-navy-300 max-w-xl mx-auto">
+        Join a team that's driving industries forward. Explore our open positions below.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY WORK HERE -->
+  <section class="py-20 px-6 bg-navy-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-front-500 font-semibold text-sm tracking-widest uppercase">Why Work Here</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mt-3">More than a job.</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover">
+          <div class="text-3xl mb-4">🌱</div>
+          <h3 class="text-lg font-bold text-white mb-2">Growth</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Continuous learning, mentorship, and clear advancement pathways.</p>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover">
+          <div class="text-3xl mb-4">💪</div>
+          <h3 class="text-lg font-bold text-white mb-2">Impact</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Work that matters — connecting communities and building infrastructure.</p>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover">
+          <div class="text-3xl mb-4">🏡</div>
+          <h3 class="text-lg font-bold text-white mb-2">Flexibility</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Remote-friendly culture with flexible hours and work-life balance.</p>
+        </div>
+        <div class="bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover">
+          <div class="text-3xl mb-4">🎯</div>
+          <h3 class="text-lg font-bold text-white mb-2">Ownership</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Take initiative, lead projects, and see your ideas come to life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN POSITIONS -->
+  <section class="py-20 px-6 bg-navy-950">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-front-500 font-semibold text-sm tracking-widest uppercase">Open Positions</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Current openings.</h2>
+        <p class="text-navy-400 mt-2">Click any position to view full details</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Senior Programmer -->
+        <a href="#" onclick="toggleJob('sr-programmer')" class="block bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-pointer">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">ENGINEERING</span>
+                <span class="text-navy-500 text-sm">Full-time · Remote</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Senior Programmer</h3>
+              <p class="text-navy-400 text-sm mb-1">Lead development across our portfolio — architect systems, mentor developers, and build solutions.</p>
+              <p class="text-front-500 font-semibold text-sm mt-2">$110,000 – $150,000 CAD</p>
+            </div>
+            <span class="text-front-400 text-2xl mt-2">→</span>
+          </div>
+          <div id="sr-programmer" class="hidden mt-8 pt-6 border-t border-navy-700 space-y-6 text-left">
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Key Duties</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>Design, develop, and maintain full-stack web applications and internal tools</li>
+                <li>Architect scalable software solutions and make key technical decisions</li>
+                <li>Write clean, testable, and well-documented code following best practices</li>
+                <li>Mentor and provide technical guidance to junior and mid-level developers</li>
+                <li>Conduct code reviews and enforce coding standards</li>
+                <li>Collaborate with stakeholders to define project requirements and timelines</li>
+                <li>Optimize application performance, security, and reliability</li>
+                <li>Stay current with emerging technologies and propose adoption where beneficial</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Qualifications</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>7+ years of professional software development experience</li>
+                <li>Strong proficiency in Python, JavaScript/TypeScript, or Go</li>
+                <li>Experience with React, Vue, Django, Flask, or FastAPI</li>
+                <li>Strong database skills: PostgreSQL, MySQL, or MongoDB</li>
+                <li>Experience with cloud platforms: AWS, GCP, or Azure</li>
+                <li>Proficiency with Docker, CI/CD pipelines, and Git workflows</li>
+                <li>Experience leading development teams or mentoring junior developers</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Benefits</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>Comprehensive health, dental, and vision coverage</li>
+                <li>Fully remote position with flexible hours</li>
+                <li>Professional development budget ($3,000/year)</li>
+                <li>4 weeks paid vacation plus personal days</li>
+                <li>Home office setup allowance</li>
+                <li>RRSP matching program</li>
+                <li>Annual company retreat · Equity participation opportunities</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">How to Apply</h4>
+              <p class="text-navy-300 text-sm">Send your resume, cover letter, and GitHub/portfolio to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline">contact@frontseatview.com</a> with subject line "Senior Programmer Application."</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Cyber Security Specialist -->
+        <a href="#" onclick="toggleJob('cyber-security')" class="block bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-pointer">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">SECURITY</span>
+                <span class="text-navy-500 text-sm">Full-time · Remote/Hybrid</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Cyber Security Specialist</h3>
+              <p class="text-navy-400 text-sm mb-1">Protect our infrastructure and client data — implement security measures and build a security-first culture.</p>
+              <p class="text-front-500 font-semibold text-sm mt-2">$95,000 – $130,000 CAD</p>
+            </div>
+            <span class="text-front-400 text-2xl mt-2">→</span>
+          </div>
+          <div id="cyber-security" class="hidden mt-8 pt-6 border-t border-navy-700 space-y-6 text-left">
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Key Duties</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>Design and implement security policies, protocols, and procedures</li>
+                <li>Monitor networks and systems for security breaches and investigate incidents</li>
+                <li>Conduct regular vulnerability assessments, penetration testing, and risk analysis</li>
+                <li>Manage and configure security tools: firewalls, IDS/IPS, SIEM, endpoint protection</li>
+                <li>Lead incident response efforts and perform forensic analysis when needed</li>
+                <li>Stay current with threat intelligence and emerging security trends</li>
+                <li>Conduct security awareness training for employees</li>
+                <li>Ensure compliance with relevant regulations and industry standards</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Qualifications</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>5+ years of experience in cybersecurity roles</li>
+                <li>Professional certifications: CISSP, CEH, CompTIA Security+, or equivalent</li>
+                <li>Deep knowledge of network security, encryption, and authentication protocols</li>
+                <li>Experience with security frameworks: NIST, ISO 27001, SOC 2</li>
+                <li>Proficiency with security tools: Wireshark, Metasploit, Nessus, Splunk</li>
+                <li>Strong understanding of cloud security (AWS, Azure, or GCP)</li>
+                <li>Excellent analytical and communication skills</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Benefits</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>Comprehensive health, dental, and vision coverage</li>
+                <li>Flexible remote/hybrid work arrangements</li>
+                <li>Professional development and certification support ($3,000/year)</li>
+                <li>4 weeks paid vacation plus personal days</li>
+                <li>Home office setup allowance</li>
+                <li>RRSP matching program · Conference and training attendance support</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">How to Apply</h4>
+              <p class="text-navy-300 text-sm">Send your resume and cover letter to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline">contact@frontseatview.com</a> with subject line "Cyber Security Specialist Application."</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- IT QA Testing Specialist -->
+        <a href="#" onclick="toggleJob('qa-testing')" class="block bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-pointer">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">QUALITY</span>
+                <span class="text-navy-500 text-sm">Full-time · Remote</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">IT QA Testing Specialist</h3>
+              <p class="text-navy-400 text-sm mb-1">Ensure quality across our software and infrastructure — design test strategies and automate testing.</p>
+              <p class="text-front-500 font-semibold text-sm mt-2">$70,000 – $90,000 CAD</p>
+            </div>
+            <span class="text-front-400 text-2xl mt-2">→</span>
+          </div>
+          <div id="qa-testing" class="hidden mt-8 pt-6 border-t border-navy-700 space-y-6 text-left">
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Key Duties</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>Develop and execute comprehensive test plans, test cases, and test scripts</li>
+                <li>Perform functional, regression, integration, and performance testing</li>
+                <li>Identify, document, and track software defects using issue tracking tools</li>
+                <li>Collaborate with development teams to reproduce, diagnose, and resolve issues</li>
+                <li>Design and maintain automated test suites using Selenium, Playwright, or Cypress</li>
+                <li>Conduct API testing and validate data integrity across systems</li>
+                <li>Participate in code reviews and provide feedback on testability</li>
+                <li>Create and maintain testing documentation and quality metrics reports</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Qualifications</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>3+ years of experience in software quality assurance and testing</li>
+                <li>Proficiency with test automation frameworks and tools</li>
+                <li>Strong understanding of SDLC, Agile methodologies, and QA best practices</li>
+                <li>Experience with SQL and database testing</li>
+                <li>Knowledge of networking concepts and API testing (REST, GraphQL)</li>
+                <li>ISTQB or similar QA certification is a plus</li>
+                <li>Excellent problem-solving skills and attention to detail</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">Benefits</h4>
+              <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
+                <li>Comprehensive health, dental, and vision coverage</li>
+                <li>Flexible remote work options</li>
+                <li>Professional development budget ($2,000/year)</li>
+                <li>3 weeks paid vacation plus personal days</li>
+                <li>Home office setup allowance</li>
+                <li>RRSP matching program</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-front-400 font-bold mb-3">How to Apply</h4>
+              <p class="text-navy-300 text-sm">Send your resume and cover letter to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline">contact@frontseatview.com</a> with subject line "IT QA Testing Specialist Application."</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-navy-900">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-black text-white mb-4">Don't see your role?</h2>
+      <p class="text-navy-300 mb-8">We're always looking for talented people. Send us your resume and tell us how you can contribute.</p>
+      <a href="/#contact" class="inline-block px-8 py-4 bg-front-500 text-navy-950 font-bold rounded-xl hover:bg-front-400 transition-all text-lg shadow-lg shadow-front-500/25">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-navy-800 bg-navy-950 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-navy-500">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 bg-front-500 rounded flex items-center justify-center font-black text-navy-950 text-xs">FS</div>
+        <span>© 2026 Front Seat Holdings Inc. All rights reserved.</span>
+      </div>
+      <div class="flex gap-6">
+        <span>Front Seat Fiber</span>
+        <span>Front Seat Software</span>
+        <span>Front Seat Foods</span>
+        <span>Front Seat Consulting</span>
+        <span>Front Seat Rentals</span>
+        <span>Front Seat Recruitment</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleJob(id) {
+      event.preventDefault();
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
