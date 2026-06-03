@@ -129,21 +129,23 @@
 
       <div class="space-y-6">
         <!-- Senior Programmer -->
-        <a href="#" onclick="toggleJob('sr-programmer')" class="block bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-pointer">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">ENGINEERING</span>
-                <span class="text-navy-500 text-sm">Full-time · Remote</span>
+        <div class="bg-navy-800 rounded-2xl border border-navy-700 card-hover overflow-hidden">
+          <div onclick="toggleJob('sr-programmer')" class="p-8 cursor-pointer select-none">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">ENGINEERING</span>
+                  <span class="text-navy-500 text-sm">Full-time · Remote</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Senior Programmer</h3>
+                <p class="text-navy-400 text-sm">Lead development across our portfolio — architect systems, mentor developers, and build solutions.</p>
+                <p class="text-front-500 font-semibold text-sm mt-2">$110,000 – $150,000 CAD</p>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-2">Senior Programmer</h3>
-              <p class="text-navy-400 text-sm mb-1">Lead development across our portfolio — architect systems, mentor developers, and build solutions.</p>
-              <p class="text-front-500 font-semibold text-sm mt-2">$110,000 – $150,000 CAD</p>
+              <span id="sr-programmer-arrow" class="text-front-400 text-2xl mt-2 transition-transform duration-300">→</span>
             </div>
-            <span class="text-front-400 text-2xl mt-2">→</span>
           </div>
-          <div id="sr-programmer" class="hidden mt-8 pt-6 border-t border-navy-700 space-y-6 text-left">
-            <div>
+          <div id="sr-programmer" class="hidden px-8 pb-8 space-y-6 text-left border-t border-navy-700">
+            <div class="pt-6">
               <h4 class="text-front-400 font-bold mb-3">Key Duties</h4>
               <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
                 <li>Design, develop, and maintain full-stack web applications and internal tools</li>
@@ -182,27 +184,29 @@
             </div>
             <div>
               <h4 class="text-front-400 font-bold mb-3">How to Apply</h4>
-              <p class="text-navy-300 text-sm">Send your resume, cover letter, and GitHub/portfolio to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline">contact@frontseatview.com</a> with subject line "Senior Programmer Application."</p>
+              <p class="text-navy-300 text-sm break-words">Send your resume, cover letter, and GitHub/portfolio to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline break-all">contact@frontseatview.com</a> with subject "Senior Programmer Application."</p>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Cyber Security Specialist -->
-        <a href="#" onclick="toggleJob('cyber-security')" class="block bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-pointer">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">SECURITY</span>
-                <span class="text-navy-500 text-sm">Full-time · Remote/Hybrid</span>
+        <div class="bg-navy-800 rounded-2xl border border-navy-700 card-hover overflow-hidden">
+          <div onclick="toggleJob('cyber-security')" class="p-8 cursor-pointer select-none">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">SECURITY</span>
+                  <span class="text-navy-500 text-sm">Full-time · Remote/Hybrid</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Cyber Security Specialist</h3>
+                <p class="text-navy-400 text-sm">Protect our infrastructure and client data — implement security measures and build a security-first culture.</p>
+                <p class="text-front-500 font-semibold text-sm mt-2">$95,000 – $130,000 CAD</p>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-2">Cyber Security Specialist</h3>
-              <p class="text-navy-400 text-sm mb-1">Protect our infrastructure and client data — implement security measures and build a security-first culture.</p>
-              <p class="text-front-500 font-semibold text-sm mt-2">$95,000 – $130,000 CAD</p>
+              <span id="cyber-security-arrow" class="text-front-400 text-2xl mt-2 transition-transform duration-300">→</span>
             </div>
-            <span class="text-front-400 text-2xl mt-2">→</span>
           </div>
-          <div id="cyber-security" class="hidden mt-8 pt-6 border-t border-navy-700 space-y-6 text-left">
-            <div>
+          <div id="cyber-security" class="hidden px-8 pb-8 space-y-6 text-left border-t border-navy-700">
+            <div class="pt-6">
               <h4 class="text-front-400 font-bold mb-3">Key Duties</h4>
               <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
                 <li>Design and implement security policies, protocols, and procedures</li>
@@ -240,27 +244,29 @@
             </div>
             <div>
               <h4 class="text-front-400 font-bold mb-3">How to Apply</h4>
-              <p class="text-navy-300 text-sm">Send your resume and cover letter to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline">contact@frontseatview.com</a> with subject line "Cyber Security Specialist Application."</p>
+              <p class="text-navy-300 text-sm break-words">Send your resume and cover letter to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline break-all">contact@frontseatview.com</a> with subject "Cyber Security Specialist Application."</p>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- IT QA Testing Specialist -->
-        <a href="#" onclick="toggleJob('qa-testing')" class="block bg-navy-800 rounded-2xl p-8 border border-navy-700 card-hover cursor-pointer">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">QUALITY</span>
-                <span class="text-navy-500 text-sm">Full-time · Remote</span>
+        <div class="bg-navy-800 rounded-2xl border border-navy-700 card-hover overflow-hidden">
+          <div onclick="toggleJob('qa-testing')" class="p-8 cursor-pointer select-none">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-xs font-semibold tracking-wide">QUALITY</span>
+                  <span class="text-navy-500 text-sm">Full-time · Remote</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">IT QA Testing Specialist</h3>
+                <p class="text-navy-400 text-sm">Ensure quality across our software and infrastructure — design test strategies and automate testing.</p>
+                <p class="text-front-500 font-semibold text-sm mt-2">$70,000 – $90,000 CAD</p>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-2">IT QA Testing Specialist</h3>
-              <p class="text-navy-400 text-sm mb-1">Ensure quality across our software and infrastructure — design test strategies and automate testing.</p>
-              <p class="text-front-500 font-semibold text-sm mt-2">$70,000 – $90,000 CAD</p>
+              <span id="qa-testing-arrow" class="text-front-400 text-2xl mt-2 transition-transform duration-300">→</span>
             </div>
-            <span class="text-front-400 text-2xl mt-2">→</span>
           </div>
-          <div id="qa-testing" class="hidden mt-8 pt-6 border-t border-navy-700 space-y-6 text-left">
-            <div>
+          <div id="qa-testing" class="hidden px-8 pb-8 space-y-6 text-left border-t border-navy-700">
+            <div class="pt-6">
               <h4 class="text-front-400 font-bold mb-3">Key Duties</h4>
               <ul class="text-navy-300 text-sm space-y-2 list-disc list-inside">
                 <li>Develop and execute comprehensive test plans, test cases, and test scripts</li>
@@ -298,10 +304,10 @@
             </div>
             <div>
               <h4 class="text-front-400 font-bold mb-3">How to Apply</h4>
-              <p class="text-navy-300 text-sm">Send your resume and cover letter to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline">contact@frontseatview.com</a> with subject line "IT QA Testing Specialist Application."</p>
+              <p class="text-navy-300 text-sm break-words">Send your resume and cover letter to <a href="mailto:contact@frontseatview.com" class="text-front-400 underline break-all">contact@frontseatview.com</a> with subject "IT QA Testing Specialist Application."</p>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -339,7 +345,11 @@
     function toggleJob(id) {
       event.preventDefault();
       const el = document.getElementById(id);
+      const arrow = document.getElementById(id + '-arrow');
       el.classList.toggle('hidden');
+      if (arrow) {
+        arrow.style.transform = el.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(90deg)';
+      }
     }
   </script>
 
