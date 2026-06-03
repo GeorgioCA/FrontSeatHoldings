@@ -82,7 +82,7 @@
   <nav class="fixed top-0 w-full z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-800">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 group">
+      <a href="/" class="flex items-center gap-3 group">
         <div class="w-10 h-10 bg-front-500 rounded-lg flex items-center justify-center font-black text-navy-950 text-lg group-hover:bg-front-400 transition-colors">
           FS
         </div>
@@ -90,7 +90,7 @@
           Front Seat <span class="text-front-400 font-bold">Holdings</span>
         </span>
       </a>
-      <!-- Nav Links -->
+      <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-8 text-sm">
         <a href="/" class="text-navy-200 hover:text-front-400 transition-colors">Home</a>
         <a href="#about" class="text-navy-200 hover:text-front-400 transition-colors">About</a>
@@ -102,6 +102,20 @@
         </a>
         <span class="text-navy-500 text-xs">EN / <a href="/fr" class="hover:text-front-400 transition-colors">FR</a></span>
       </div>
+      <!-- Hamburger -->
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white text-2xl p-2">
+        ☰
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-t border-navy-800 px-6 py-4 space-y-3 text-sm">
+      <a href="/" class="block text-navy-200 hover:text-front-400 py-2">Home</a>
+      <a href="#about" class="block text-navy-200 hover:text-front-400 py-2">About</a>
+      <a href="#divisions" class="block text-navy-200 hover:text-front-400 py-2">Divisions</a>
+      <a href="#story" class="block text-navy-200 hover:text-front-400 py-2">Our Story</a>
+      <a href="/careers" class="block text-navy-200 hover:text-front-400 py-2">Careers</a>
+      <a href="#contact" class="block text-front-400 py-2 font-medium">Contact</a>
+      <div class="pt-2 border-t border-navy-700 text-navy-500 text-xs">EN / <a href="/fr" class="text-front-400">FR</a></div>
     </div>
   </nav>
 
