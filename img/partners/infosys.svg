@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 50">
+  <path fill="#FFFFFF" d="M0 10v25l5 0V10H0z"/>
+  <path fill="#FFFFFF" d="M55 18c0-4 3-7 6-7 3 0 5 3 5 7s-2 7-5 7c-3 0-6-4-6-7zm22 5c0 0 0 1 0 1h0zm3-17c0 0 0 1 0 1l-1-1zM93 18c2-2 3-3 5-3 2 0 4 1 4 3s-1 3-4 4c-2 1-4 1-5 3 0 0 0-1 0-2 0-4-3-8-7-8-4 0-8 3-8 8s1 7 3 9l-5 0 0-12h0V15h-2v3c0 0 0 0 0 1v12h-2v2h2c0 3 2 5 5 5 2 0 3 0 4-1l0-2s0 0 0 0c-1 1-2 1-4 1-2 0-3-1-3-3l9 0c0 0 0 0 0 0 4 0 7-2 8-5 0 0 0 1 0 1 0 3 3 5 6 5h0c1 0 2 0 3-1l0-5h0zm-22-17l-1 2c0 0 2 2 3 4l-4 12h-2v-1 0l-3-12c0 0 0 1 0 1l3 7-2-7zm0 0 2 4c1 1 2 3 3 5l-4 12c-1 2 1 3 4 3 1 0 3 0 4-1l0-2c-1 1-2 1-3 1-2 0-4 0-4-2l0-1 0 0 16-3 0-2-16 3zm-16 12-3 0 0 1h3z"/>
+  <text x="25" y="38" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="30" fill="#FFFFFF">Infosys</text>
+</svg>
