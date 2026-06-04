@@ -9,6 +9,7 @@ COPY Founder-Georgio.png /usr/share/nginx/html/
 COPY index.html /usr/share/nginx/html/
 COPY about.html /usr/share/nginx/html/
 COPY fr.html /usr/share/nginx/html/
+COPY a-propos.html /usr/share/nginx/html/
 COPY carrieres.html /usr/share/nginx/html/
 COPY careers.html /usr/share/nginx/html/
 COPY brand/ /usr/share/nginx/html/brand/
