@@ -12,6 +12,8 @@ COPY fr.html /usr/share/nginx/html/
 COPY a-propos.html /usr/share/nginx/html/
 COPY carrieres.html /usr/share/nginx/html/
 COPY careers.html /usr/share/nginx/html/
+COPY contact.html /usr/share/nginx/html/
+COPY contact-fr.html /usr/share/nginx/html/
 COPY brand/ /usr/share/nginx/html/brand/
 
 # Health check
