@@ -5,7 +5,7 @@ FROM nginx:1.27-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Site files
-COPY Founder-Georgio.png /usr/share/nginx/html/
+COPY img/ /usr/share/nginx/html/img/
 COPY index.html /usr/share/nginx/html/
 COPY about.html /usr/share/nginx/html/
 COPY fr.html /usr/share/nginx/html/
