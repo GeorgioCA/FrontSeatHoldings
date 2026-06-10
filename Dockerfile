@@ -11,6 +11,7 @@ COPY index.html /usr/share/nginx/html/
 COPY about.html /usr/share/nginx/html/
 COPY careers.html /usr/share/nginx/html/
 COPY contact.html /usr/share/nginx/html/
+COPY swetrix.js /usr/share/nginx/html/
 COPY fr/ /usr/share/nginx/html/fr/
 
 # Health check
