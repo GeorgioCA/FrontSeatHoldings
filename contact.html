@@ -191,7 +191,7 @@
                 }]
               };
               try {
-                var res = await fetch('https://discord.com/api/webhooks/1514138943820402718/B-wsncAU0wMEG22E3QR1Yya7LsCzEpQLkB1GLx4EpkOIbdJ_BH5qs-Cy_Pbf9UYOgjw7', {
+                var res = await fetch('/api/contact', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(embed)
