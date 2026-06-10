@@ -1,0 +1,23 @@
+{
+  "name": "frontseatholdings",
+  "version": "1.0.0",
+  "description": "**frontseatview.com** — static bilingual corporate site for Front Seat Holdings Inc. (Holdings Siège Avant Inc.), a federal Canadian holding company with six business divisions.",
+  "main": "swetrix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgioCA/FrontSeatHoldings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgioCA/FrontSeatHoldings/issues"
+  },
+  "homepage": "https://github.com/GeorgioCA/FrontSeatHoldings#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
