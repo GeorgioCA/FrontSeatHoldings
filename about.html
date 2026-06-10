@@ -54,10 +54,12 @@
   <script src="https://swetrix.org/swetrix.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      swetrix.init('J6svPneHjveh', {
-        apiURL: 'https://swetrix-api.frontseatview.com/log',
-      })
-      swetrix.trackViews()
+      if (typeof swetrix !== 'undefined') {
+        swetrix.init('J6svPneHjveh', {
+          apiURL: 'https://swetrix-api.frontseatview.com/log',
+        })
+        swetrix.trackViews()
+      }
     })
   </script>
 

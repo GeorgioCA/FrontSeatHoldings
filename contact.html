@@ -19,10 +19,12 @@
   <script src="https://swetrix.org/swetrix.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      swetrix.init('J6svPneHjveh', {
-        apiURL: 'https://swetrix-api.frontseatview.com/log',
-      })
-      swetrix.trackViews()
+      if (typeof swetrix !== 'undefined') {
+        swetrix.init('J6svPneHjveh', {
+          apiURL: 'https://swetrix-api.frontseatview.com/log',
+        })
+        swetrix.trackViews()
+      }
     })
   </script>
 
@@ -175,7 +177,7 @@
                 'consulting': 'Front Seat Consulting', 'rentals': 'Front Seat Rentals',
                 'recruitment': 'Front Seat Recruitment', 'careers': 'Careers', 'other': 'Other'
               };
-              const embed = {
+              const data = {
                 embeds: [{
                   title: 'New Contact Form Submission',
                   color: 0xf59e0b,
@@ -189,10 +191,11 @@
                 }]
               };
               try {
+                const fd = new FormData();
+                fd.append('payload_json', JSON.stringify(data));
                 const res = await fetch('https://discord.com/api/webhooks/1514138943820402718/B-wsncAU0wMEG22E3QR1Yya7LsCzEpQLkB1GLx4EpkOIbdJ_BH5qs-Cy_Pbf9UYOgjw7', {
                   method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(embed)
+                  body: fd
                 });
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 status.className = 'text-sm text-center py-2 rounded-xl bg-green-900/50 text-green-400';
