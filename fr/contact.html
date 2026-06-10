@@ -153,13 +153,8 @@
               Envoyer le message
             </button>
           </form>
-          <!-- Hidden webhook form (bypasses CORS via iframe target) -->
-          <iframe name="wh-frame" id="wh-frame" style="display:none" aria-hidden="true"></iframe>
-          <form id="webhook-form" action="https://discord.com/api/webhooks/1514138943820402718/B-wsncAU0wMEG22E3QR1Yya7LsCzEpQLkB1GLx4EpkOIbdJ_BH5qs-Cy_Pbf9UYOgjw7" method="POST" enctype="multipart/form-data" target="wh-frame" style="display:none">
-            <input type="hidden" name="payload_json" id="payload-input">
-          </form>
           <script>
-            function handleContactForm(event) {
+            async function handleContactForm(event) {
               event.preventDefault();
               var btn = document.getElementById('submit-btn');
               var status = document.getElementById('form-status');
@@ -190,29 +185,22 @@
                   timestamp: new Date().toISOString()
                 }]
               };
-              var iframe = document.getElementById('wh-frame');
-              var settled = false;
-              function onResult(success) {
-                if (settled) return;
-                settled = true;
-                if (success) {
-                  status.className = 'text-sm text-center py-2 rounded-xl bg-green-900/50 text-green-400';
-                  status.textContent = '\u2713 Message envoyé avec succès ! Nous vous répondrons dans les 24 heures.';
-                  document.getElementById('contact-form').reset();
-                } else {
-                  status.className = 'text-sm text-center py-2 rounded-xl bg-red-900/50 text-red-400';
-                  status.textContent = '\u2717 Échec de l\'envoi. Veuillez réessayer ou nous envoyer un courriel directement.';
-                }
-                btn.disabled = false;
-                btn.textContent = 'Envoyer le message';
+              try {
+                var res = await fetch('https://discord.com/api/webhooks/1514138943820402718/B-wsncAU0wMEG22E3QR1Yya7LsCzEpQLkB1GLx4EpkOIbdJ_BH5qs-Cy_Pbf9UYOgjw7', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(embed)
+                });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                status.className = 'text-sm text-center py-2 rounded-xl bg-green-900/50 text-green-400';
+                status.textContent = '\u2713 Message envoyé avec succès ! Nous vous répondrons dans les 24 heures.';
+                document.getElementById('contact-form').reset();
+              } catch (e) {
+                status.className = 'text-sm text-center py-2 rounded-xl bg-red-900/50 text-red-400';
+                status.textContent = '\u2717 Échec de l\'envoi. Veuillez réessayer ou nous envoyer un courriel directement.';
               }
-              iframe.onload = function() { onResult(true); };
-              setTimeout(function() {
-                if (!settled) onResult(true);
-              }, 8000);
-              document.getElementById('payload-input').value = JSON.stringify(embed);
-              document.getElementById('webhook-form').submit();
-              return false;
+              btn.disabled = false;
+              btn.textContent = 'Envoyer le message';
             }
           </script>
         </div>
