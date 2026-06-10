@@ -112,24 +112,24 @@
         <div class="bg-navy-800 rounded-3xl p-8 md:p-10 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-2">Envoyez un message</h2>
           <p class="text-navy-400 text-sm mb-8">Remplissez le formulaire et nous vous répondrons dans les 24 heures.</p>
-          <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-5">
+          <form id="contact-form" class="space-y-5" onsubmit="return handleContactForm(event)">
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-navy-300 text-sm mb-2">Prénom *</label>
-                <input type="text" name="first-name" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors" placeholder="Jean">
+                <input type="text" id="prenom" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors" placeholder="Jean">
               </div>
               <div>
                 <label class="block text-navy-300 text-sm mb-2">Nom *</label>
-                <input type="text" name="last-name" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors" placeholder="Dupont">
+                <input type="text" id="nom" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors" placeholder="Dupont">
               </div>
             </div>
             <div>
               <label class="block text-navy-300 text-sm mb-2">Courriel *</label>
-              <input type="email" name="email" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors" placeholder="jean@entreprise.com">
+              <input type="email" id="email" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors" placeholder="jean@entreprise.com">
             </div>
             <div>
               <label class="block text-navy-300 text-sm mb-2">Sujet</label>
-              <select name="subject" class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-front-500 transition-colors">
+              <select id="subject" class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-front-500 transition-colors">
                 <option value="">Choisir un sujet</option>
                 <option value="partnership">Partenariat</option>
                 <option value="fiber">Front Seat Fiber</option>
@@ -144,13 +144,64 @@
             </div>
             <div>
               <label class="block text-navy-300 text-sm mb-2">Message *</label>
-              <textarea name="message" required rows="5" class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors resize-none" placeholder="Parlez-nous de votre projet ou demande..."></textarea>
+              <textarea id="message" required rows="5" class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-white placeholder-navy-500 focus:outline-none focus:border-front-500 transition-colors resize-none" placeholder="Parlez-nous de votre projet ou demande..."></textarea>
             </div>
-            <button type="submit" class="w-full px-8 py-4 bg-front-500 text-navy-950 font-bold rounded-xl hover:bg-front-400 transition-all text-lg shadow-lg shadow-front-500/25">
+            <div id="form-status" class="hidden text-sm text-center py-2 rounded-xl"></div>
+            <button type="submit" id="submit-btn" class="w-full px-8 py-4 bg-front-500 text-navy-950 font-bold rounded-xl hover:bg-front-400 transition-all text-lg shadow-lg shadow-front-500/25">
               Envoyer le message
             </button>
-            <p class="text-navy-500 text-xs text-center mt-3">Propulsé par <a href="https://formspree.io" class="underline hover:text-front-400" target="_blank">Formspree</a>. Aucune donnée stockée sur ce serveur.</p>
           </form>
+          <script>
+            async function handleContactForm(event) {
+              event.preventDefault();
+              const btn = document.getElementById('submit-btn');
+              const status = document.getElementById('form-status');
+              const prenom = document.getElementById('prenom').value.trim();
+              const nom = document.getElementById('nom').value.trim();
+              const email = document.getElementById('email').value.trim();
+              const subject = document.getElementById('subject').value || 'General';
+              const message = document.getElementById('message').value.trim();
+              btn.disabled = true;
+              btn.textContent = 'Envoi...';
+              status.className = 'hidden';
+              const subjectLabels = {
+                'partnership': 'Partenariat', 'fiber': 'Front Seat Fiber',
+                'software': 'Front Seat Software', 'foods': 'Front Seat Foods',
+                'consulting': 'Front Seat Consulting', 'rentals': 'Front Seat Rentals',
+                'recruitment': 'Front Seat Recruitment', 'careers': 'Carrières', 'other': 'Autre'
+              };
+              const embed = {
+                embeds: [{
+                  title: 'New Contact Form Submission (FR)',
+                  color: 0xf59e0b,
+                  fields: [
+                    { name: 'Name', value: prenom + ' ' + nom, inline: true },
+                    { name: 'Email', value: email, inline: true },
+                    { name: 'Subject', value: subjectLabels[subject] || subject, inline: true },
+                    { name: 'Message', value: message }
+                  ],
+                  timestamp: new Date().toISOString()
+                }]
+              };
+              try {
+                const res = await fetch('https://discord.com/api/webhooks/1514138943820402718/B-wsncAU0wMEG22E3QR1Yya7LsCzEpQLkB1GLx4EpkOIbdJ_BH5qs-Cy_Pbf9UYOgjw7', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(embed)
+                });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                status.className = 'text-sm text-center py-2 rounded-xl bg-green-900/50 text-green-400';
+                status.textContent = '✓ Message envoyé avec succès ! Nous vous répondrons dans les 24 heures.';
+                document.getElementById('contact-form').reset();
+              } catch (e) {
+                status.className = 'text-sm text-center py-2 rounded-xl bg-red-900/50 text-red-400';
+                status.textContent = '✗ Une erreur est survenue. Veuillez réessayer ou nous envoyer un courriel directement.';
+              }
+              btn.disabled = false;
+              btn.textContent = 'Envoyer le message';
+              return false;
+            }
+          </script>
         </div>
       </div>
     </div>
